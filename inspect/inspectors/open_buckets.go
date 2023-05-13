@@ -21,8 +21,8 @@ import (
 	"io"
 	"strings"
 
-	"github.com/wallix/awless/cloud"
-	"github.com/wallix/awless/graph"
+	"github.com/thunderbird86/awless/cloud"
+	"github.com/thunderbird86/awless/graph"
 )
 
 type OpenBuckets struct {

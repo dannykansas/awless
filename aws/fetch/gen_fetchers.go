@@ -38,9 +38,9 @@ import (
 	"github.com/aws/aws-sdk-go/service/rds"
 	"github.com/aws/aws-sdk-go/service/route53"
 	"github.com/aws/aws-sdk-go/service/sns"
-	"github.com/wallix/awless/aws/conv"
-	"github.com/wallix/awless/fetch"
-	"github.com/wallix/awless/graph"
+	"github.com/thunderbird86/awless/aws/conv"
+	"github.com/thunderbird86/awless/fetch"
+	"github.com/thunderbird86/awless/graph"
 )
 
 func BuildInfraFetchFuncs(conf *Config) fetch.Funcs {

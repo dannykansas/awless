@@ -21,8 +21,8 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
-	"github.com/wallix/awless/aws/config"
-	"github.com/wallix/awless/config"
+	"github.com/thunderbird86/awless/aws/config"
+	"github.com/thunderbird86/awless/config"
 )
 
 func init() {

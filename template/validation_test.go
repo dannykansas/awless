@@ -3,10 +3,10 @@ package template_test
 import (
 	"testing"
 
-	"github.com/wallix/awless/cloud"
-	"github.com/wallix/awless/graph"
-	"github.com/wallix/awless/graph/resourcetest"
-	"github.com/wallix/awless/template"
+	"github.com/thunderbird86/awless/cloud"
+	"github.com/thunderbird86/awless/graph"
+	"github.com/thunderbird86/awless/graph/resourcetest"
+	"github.com/thunderbird86/awless/template"
 )
 
 func TestValidation(t *testing.T) {

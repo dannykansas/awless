@@ -202,7 +202,7 @@
   version = "v1.3.0"
 
 [[projects]]
-  name = "github.com/wallix/awless-scheduler"
+  name = "github.com/thunderbird86/awless-scheduler"
   packages = [
     "client",
     "model"

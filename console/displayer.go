@@ -29,9 +29,9 @@ import (
 
 	"github.com/fatih/color"
 	"github.com/olekukonko/tablewriter"
-	"github.com/wallix/awless/cloud"
-	"github.com/wallix/awless/cloud/match"
-	"github.com/wallix/awless/graph"
+	"github.com/thunderbird86/awless/cloud"
+	"github.com/thunderbird86/awless/cloud/match"
+	"github.com/thunderbird86/awless/graph"
 )
 
 var (

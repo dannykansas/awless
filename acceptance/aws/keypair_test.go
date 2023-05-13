@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/aws/aws-sdk-go/service/ec2"
-	"github.com/wallix/awless/console"
+	"github.com/thunderbird86/awless/console"
 )
 
 func TestKeypair(t *testing.T) {

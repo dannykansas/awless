@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/wallix/awless/template/params"
+	"github.com/thunderbird86/awless/template/params"
 )
 
 func TestValidation(t *testing.T) {

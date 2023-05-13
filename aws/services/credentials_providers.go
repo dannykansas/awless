@@ -28,8 +28,8 @@ import (
 	"github.com/aws/aws-sdk-go/aws/awserr"
 	"github.com/aws/aws-sdk-go/aws/credentials"
 	"github.com/aws/aws-sdk-go/aws/credentials/stscreds"
-	"github.com/wallix/awless/aws/spec"
-	"github.com/wallix/awless/logger"
+	"github.com/thunderbird86/awless/aws/spec"
+	"github.com/thunderbird86/awless/logger"
 )
 
 type cachedCredential struct {
