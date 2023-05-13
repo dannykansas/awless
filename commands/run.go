@@ -32,15 +32,14 @@ import (
 	"strings"
 	stdsync "sync"
 	"text/tabwriter"
-
 	"time"
 
 	"github.com/chzyer/readline"
 	"github.com/spf13/cobra"
-	"github.com/thunderbird86/awless-scheduler/client"
 	"github.com/thunderbird86/awless/aws/doc"
 	"github.com/thunderbird86/awless/aws/services"
 	"github.com/thunderbird86/awless/aws/spec"
+	"github.com/thunderbird86/awless/client"
 	"github.com/thunderbird86/awless/cloud"
 	"github.com/thunderbird86/awless/cloud/match"
 	"github.com/thunderbird86/awless/cloud/properties"
