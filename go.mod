@@ -13,7 +13,6 @@ require (
 	github.com/oklog/ulid v0.3.0
 	github.com/olekukonko/tablewriter v0.0.0-20171203151007-65fec0d89a57
 	github.com/spf13/cobra v0.0.2-0.20171231101556-b95ab734e27d
-	github.com/thunderbird86/awless-scheduler v0.0.6
 	github.com/wallix/triplestore v0.0.0-20180213143850-4099dd913851
 	golang.org/x/crypto v0.0.0-20171231215028-0fcca4842a8d
 	gopkg.in/src-d/go-git.v4 v4.0.0-rc13
@@ -38,7 +37,6 @@ require (
 	github.com/src-d/gcfg v1.3.0 // indirect
 	github.com/src-d/go-git-fixtures v3.5.0+incompatible // indirect
 	github.com/stretchr/testify v1.8.2 // indirect
-	github.com/wallix/awless-scheduler v0.0.6 // indirect
 	github.com/xanzy/ssh-agent v0.1.0 // indirect
 	golang.org/x/net v0.0.0-20171212005608-d866cfc389ce // indirect
 	golang.org/x/sys v0.6.0 // indirect

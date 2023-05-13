@@ -75,10 +75,6 @@ github.com/stretchr/testify v1.7.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/
 github.com/stretchr/testify v1.8.0/go.mod h1:yNjHg4UonilssWZ8iaSj1OCr/vHnekPRkoO+kdMU+MU=
 github.com/stretchr/testify v1.8.2 h1:+h33VjcLVPDHtOdpUCuF+7gSuG3yGIftsP1YvFihtJ8=
 github.com/stretchr/testify v1.8.2/go.mod h1:w2LPCIKwWwSfY2zedu0+kehJoqGctiVI29o6fzry7u4=
-github.com/thunderbird86/awless-scheduler v0.0.6 h1:jYAzDZb0ZzU7dpXa1KY8UQqOYAqU05qzAPadpMM5mbI=
-github.com/thunderbird86/awless-scheduler v0.0.6/go.mod h1:5s63yx+rpdTovYLyIpt2t02PV7Ep+LVGqtU0jIGkFHI=
-github.com/wallix/awless-scheduler v0.0.6 h1:0j0myT4RsRfgmc3K9BZjVLRBvdIFNYQF8QqQIGE98HQ=
-github.com/wallix/awless-scheduler v0.0.6/go.mod h1:oummDtrcZjMI7mwAaOJ9ObZLZ69eQlAWCUY4H+Y/SAU=
 github.com/wallix/triplestore v0.0.0-20180213143850-4099dd913851 h1:wkoRryfeVJs3/GdZr4hwHuaOHqkAljPRh7coa0mmhy8=
 github.com/wallix/triplestore v0.0.0-20180213143850-4099dd913851/go.mod h1:0mjZIZg2WYnhGU4dFdrZgnRcBshZzS97uz9Wq3Cgf7w=
 github.com/xanzy/ssh-agent v0.1.0 h1:lOhdXLxtmYjaHc76ZtNmJWPg948y/RnT+3N3cvKWFzY=

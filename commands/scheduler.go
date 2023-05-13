@@ -22,9 +22,9 @@ import (
 	"fmt"
 
 	"github.com/spf13/cobra"
-	"github.com/thunderbird86/awless-scheduler/client"
-	"github.com/thunderbird86/awless-scheduler/model"
+	"github.com/thunderbird86/awless/client"
 	"github.com/thunderbird86/awless/config"
+	"github.com/thunderbird86/awless/model"
 )
 
 var (
