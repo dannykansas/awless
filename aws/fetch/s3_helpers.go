@@ -9,10 +9,10 @@ import (
 	awssdk "github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/s3"
 	"github.com/aws/aws-sdk-go/service/s3/s3iface"
-	"github.com/wallix/awless/aws/conv"
-	"github.com/wallix/awless/cloud/rdf"
-	"github.com/wallix/awless/fetch"
-	"github.com/wallix/awless/graph"
+	"github.com/thunderbird86/awless/aws/conv"
+	"github.com/thunderbird86/awless/cloud/rdf"
+	"github.com/thunderbird86/awless/fetch"
+	"github.com/thunderbird86/awless/graph"
 )
 
 func forEachBucketParallel(ctx context.Context, cache fetch.Cache, api s3iface.S3API, f func(b *s3.Bucket) error) error {

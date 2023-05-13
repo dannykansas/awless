@@ -24,12 +24,12 @@ import (
 	"strings"
 
 	"github.com/spf13/cobra"
-	"github.com/wallix/awless/aws/services"
-	"github.com/wallix/awless/cloud"
-	"github.com/wallix/awless/config"
-	"github.com/wallix/awless/console"
-	"github.com/wallix/awless/logger"
-	"github.com/wallix/awless/sync"
+	"github.com/thunderbird86/awless/aws/services"
+	"github.com/thunderbird86/awless/cloud"
+	"github.com/thunderbird86/awless/config"
+	"github.com/thunderbird86/awless/console"
+	"github.com/thunderbird86/awless/logger"
+	"github.com/thunderbird86/awless/sync"
 )
 
 var (

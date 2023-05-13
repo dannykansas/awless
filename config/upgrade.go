@@ -5,7 +5,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+	http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
@@ -26,7 +26,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/wallix/awless/database"
+	"github.com/thunderbird86/awless/database"
 )
 
 const (
@@ -79,11 +79,11 @@ func notifyIfUpgrade(url string, messaging io.Writer) error {
 				if runtime.GOOS == "windows" {
 					ext = "zip"
 				}
-				install = fmt.Sprintf("Run `wget -O awless-%s.%s https://github.com/wallix/awless/releases/download/%s/awless-%s-%s.%s`", latest.Version, ext, latest.Version, runtime.GOOS, runtime.GOARCH, ext)
+				install = fmt.Sprintf("Run `wget -O awless-%s.%s https://github.com/thunderbird86/awless/releases/download/%s/awless-%s-%s.%s`", latest.Version, ext, latest.Version, runtime.GOOS, runtime.GOARCH, ext)
 			default:
-				install = "Run `go get -u github.com/wallix/awless`"
+				install = "Run `go get -u github.com/thunderbird86/awless`"
 			}
-			fmt.Fprintf(messaging, "New version %s available. Checkout the latest features at https://github.com/wallix/awless/blob/master/CHANGELOG.md\n%s\n", latest.Version, install)
+			fmt.Fprintf(messaging, "New version %s available. Checkout the latest features at https://github.com/thunderbird86/awless/blob/master/CHANGELOG.md\n%s\n", latest.Version, install)
 		}
 	}
 

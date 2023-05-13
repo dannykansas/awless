@@ -3,7 +3,7 @@ package aws
 import (
 	"fmt"
 
-	"github.com/wallix/awless/cloud/rdf"
+	"github.com/thunderbird86/awless/cloud/rdf"
 )
 
 type property struct {

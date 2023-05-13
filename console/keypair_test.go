@@ -20,7 +20,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/wallix/awless/ssh"
+	"github.com/thunderbird86/awless/ssh"
 )
 
 func TestGenerateKeyPair(t *testing.T) {

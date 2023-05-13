@@ -20,8 +20,8 @@ import (
 	"strings"
 
 	"github.com/spf13/cobra"
-	"github.com/wallix/awless/config"
-	"github.com/wallix/awless/web"
+	"github.com/thunderbird86/awless/config"
+	"github.com/thunderbird86/awless/web"
 )
 
 var (

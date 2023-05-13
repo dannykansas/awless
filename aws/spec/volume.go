@@ -1,10 +1,11 @@
-/* Copyright 2017 WALLIX
+/*
+	Copyright 2017 WALLIX
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+	http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
@@ -18,15 +19,15 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/wallix/awless/cloud"
-	"github.com/wallix/awless/template/env"
-	"github.com/wallix/awless/template/params"
+	"github.com/thunderbird86/awless/cloud"
+	"github.com/thunderbird86/awless/template/env"
+	"github.com/thunderbird86/awless/template/params"
 
 	awssdk "github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/awserr"
 	"github.com/aws/aws-sdk-go/service/ec2"
 	"github.com/aws/aws-sdk-go/service/ec2/ec2iface"
-	"github.com/wallix/awless/logger"
+	"github.com/thunderbird86/awless/logger"
 )
 
 type CreateVolume struct {

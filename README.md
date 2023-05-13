@@ -1,18 +1,18 @@
 
 
 [![Build Status](https://api.travis-ci.org/wallix/awless.svg?branch=master)](https://travis-ci.org/wallix/awless)
-[![Go Report Card](https://goreportcard.com/badge/github.com/wallix/awless)](https://goreportcard.com/report/github.com/wallix/awless)
+[![Go Report Card](https://goreportcard.com/badge/github.com/thunderbird86/awless)](https://goreportcard.com/report/github.com/thunderbird86/awless)
 
 <img src="https://user-images.githubusercontent.com/808274/33351381-5b9a0d00-d458-11e7-91ed-cf7ada7237c1.png" alt="terminal icon" width="48"> `awless` is a powerful, innovative and small surface command line interface (CLI) to manage Amazon Web Services.
 
-[Twitter](http://twitter.com/awlessCLI) | [Wiki](https://github.com/wallix/awless/wiki) | [Changelog](https://github.com/wallix/awless/blob/master/CHANGELOG.md#readme)
+[Twitter](http://twitter.com/awlessCLI) | [Wiki](https://github.com/thunderbird86/awless/wiki) | [Changelog](https://github.com/thunderbird86/awless/blob/master/CHANGELOG.md#readme)
 
 # Why awless
 
 `awless` stands out by having the following characteristics:
 
 - small and hierarchical set of commands
-- a simple/powerful text [templating language](https://github.com/wallix/awless/wiki/Templates) to create and **revert** fully-fledged infrastructures 
+- a simple/powerful text [templating language](https://github.com/thunderbird86/awless/wiki/Templates) to create and **revert** fully-fledged infrastructures 
 - wrapping/composing AWS API calls when necessary to enrich behaviour. Ex: ensure smart defaults, security best practices, etc. 
 - local log of all your cloud modifications done through `awless` to list/revert past actions
 - sync to a local graph storage of your cloud representation 
@@ -28,10 +28,10 @@ Choose one of the following options:
 
 1. On macOS, use [homebrew](http://brew.sh):  `brew tap wallix/awless; brew install awless`
 2. With `curl` (macOS/Linux), run: `curl https://raw.githubusercontent.com/wallix/awless/master/getawless.sh | bash`
-3. Download the latest `awless` binaries (Windows/Linux/macOS) [from Github](https://github.com/wallix/awless/releases/latest)
-4. If you have Golang already installed, install from the source with: `go get -u github.com/wallix/awless`
+3. Download the latest `awless` binaries (Windows/Linux/macOS) [from Github](https://github.com/thunderbird86/awless/releases/latest)
+4. If you have Golang already installed, install from the source with: `go get -u github.com/thunderbird86/awless`
 
-If you have previously used the AWS CLI or aws-shell, you don't need to configure anything! Your config will be automatically loaded (i.e. ~/.aws/{credentials,config}) and `awless` will prompt for any missing info (more at our [getting started](https://github.com/wallix/awless/wiki/Getting-Started)).
+If you have previously used the AWS CLI or aws-shell, you don't need to configure anything! Your config will be automatically loaded (i.e. ~/.aws/{credentials,config}) and `awless` will prompt for any missing info (more at our [getting started](https://github.com/thunderbird86/awless/wiki/Getting-Started)).
 
 # Main features
 
@@ -102,7 +102,7 @@ If you have previously used the AWS CLI or aws-shell, you don't need to configur
       $ awless switch mfa
       etc.
 
-- `awless` transparently syncs cloud resources locally to a graph representation in order for the CLI to leverage data and their relations in other awless commands and in an offline manner ([more on the sync](https://github.com/wallix/awless/wiki/Getting-Started#sync))
+- `awless` transparently syncs cloud resources locally to a graph representation in order for the CLI to leverage data and their relations in other awless commands and in an offline manner ([more on the sync](https://github.com/thunderbird86/awless/wiki/Getting-Started#sync))
 - `awless sync` : Explicit and manual command to fetch & store resources locally. Then query & inspect your cloud offline
 - Output listing formats either human (**default display is Markdown-compatible tables**) or machine readable (csv, tsv, json, ...): `--format`
 - `awless inspect` : Leverage **experimental** and community inspectors which are interface implementation utilities to run analysis on your cloud resources graphs
@@ -114,15 +114,15 @@ If you have previously used the AWS CLI or aws-shell, you don't need to configur
 
 # Getting started
 
-Take the tour at [Getting Started (wiki)](https://github.com/wallix/awless/wiki/Getting-Started) or read the [introductory blog post about awless](https://medium.com/@hbbio/awless-io-a-mighty-cli-for-aws-a0d48bdb59a4).
+Take the tour at [Getting Started (wiki)](https://github.com/thunderbird86/awless/wiki/Getting-Started) or read the [introductory blog post about awless](https://medium.com/@hbbio/awless-io-a-mighty-cli-for-aws-a0d48bdb59a4).
 
 More articles:
 
    - [Simplified Multi-Factor Authentication for AWS](https://medium.com/@awlessCLI/simplified-multi-factor-authentication-for-aws-d703e8d9f332)
    - [Simplified user management for AWS](https://medium.com/@awlessCLI/simplified-user-management-for-aws-6f828ccab387)
    - [InfoWorld: Production-grade deployment of WordPress](https://www.infoworld.com/article/3230547/cloud-computing/awless-tutorial-try-a-smarter-cli-for-aws.html)
-   - [Easy create & tear down of a multi-AZ CockroachDB cluster](https://github.com/wallix/awless-templates/tree/master/cockroachdb)
-   - [Deploy Vuls.io to an AWS instance and scan for vulnerabilities](https://github.com/wallix/awless-templates/tree/master/vuln_scanners)
+   - [Easy create & tear down of a multi-AZ CockroachDB cluster](https://github.com/thunderbird86/awless-templates/tree/master/cockroachdb)
+   - [Deploy Vuls.io to an AWS instance and scan for vulnerabilities](https://github.com/thunderbird86/awless-templates/tree/master/vuln_scanners)
 
 # Awards
 
@@ -154,7 +154,7 @@ Leveraging and combining the points above, `awless` lays some strong foundations
 
 **How do you create infrastructure with `awless`?**
 
-You build infrastructure using `template files` or `command one-liners` that get compiled and run through `awless` builtin engine. See [what the templating language looks like](https://github.com/wallix/awless-templates/blob/master/cockroachdb/cockroach_insecure_cluster.aws). Learn [more about the way templates work](https://github.com/wallix/awless/wiki/Templates)
+You build infrastructure using `template files` or `command one-liners` that get compiled and run through `awless` builtin engine. See [what the templating language looks like](https://github.com/thunderbird86/awless-templates/blob/master/cockroachdb/cockroach_insecure_cluster.aws). Learn [more about the way templates work](https://github.com/thunderbird86/awless/wiki/Templates)
 
 Note that all your actions against the cloud are logged. Templates are revertible/rollbackable.
 
@@ -197,5 +197,5 @@ Note that `awless` logs (through rich and revertable logs) all your actions agai
     we will not be responsible for any cloud costs incurred (even if you create a 
     million instances using awless templates).
 
-Contributors are welcome! Please head to [Contributing (wiki)](https://github.com/wallix/awless/wiki/Contributing) to learn more.
+Contributors are welcome! Please head to [Contributing (wiki)](https://github.com/thunderbird86/awless/wiki/Contributing) to learn more.
 Note that `awless` uses [triplestore](https://github.com/wallix/triplestore) another project developped at WALLIX.

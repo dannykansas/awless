@@ -4,9 +4,9 @@ import (
 	"testing"
 
 	"github.com/aws/aws-sdk-go/service/route53"
-	"github.com/wallix/awless/cloud/properties"
-	"github.com/wallix/awless/graph"
-	"github.com/wallix/awless/graph/resourcetest"
+	"github.com/thunderbird86/awless/cloud/properties"
+	"github.com/thunderbird86/awless/graph"
+	"github.com/thunderbird86/awless/graph/resourcetest"
 )
 
 func TestRecord(t *testing.T) {

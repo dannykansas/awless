@@ -20,15 +20,15 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/wallix/awless/cloud"
-	"github.com/wallix/awless/template/env"
-	"github.com/wallix/awless/template/params"
+	"github.com/thunderbird86/awless/cloud"
+	"github.com/thunderbird86/awless/template/env"
+	"github.com/thunderbird86/awless/template/params"
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/s3"
 	"github.com/aws/aws-sdk-go/service/s3/s3iface"
 	"github.com/mitchellh/ioprogress"
-	"github.com/wallix/awless/logger"
+	"github.com/thunderbird86/awless/logger"
 )
 
 type CreateS3object struct {

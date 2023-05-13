@@ -27,7 +27,7 @@ import (
 	"sync"
 	"text/tabwriter"
 
-	"github.com/wallix/awless/cloud"
+	"github.com/thunderbird86/awless/cloud"
 )
 
 var pricesURL = "http://ec2-price.com"

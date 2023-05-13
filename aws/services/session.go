@@ -29,8 +29,8 @@ import (
 	"github.com/aws/aws-sdk-go/aws/ec2metadata"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
-	"github.com/wallix/awless/aws/config"
-	"github.com/wallix/awless/logger"
+	"github.com/thunderbird86/awless/aws/config"
+	"github.com/thunderbird86/awless/logger"
 )
 
 func ResolveRegionFromEnv() (region string) {
@@ -153,8 +153,8 @@ func (s *sessionResolver) resolve() (*session.Session, error) {
 						log:     s.logger,
 					},
 					&credentialsPrompterProvider{
-						profile: s.profile,
-						out:     os.Stderr,
+						profile:               s.profile,
+						out:                   os.Stderr,
 						profileSetterCallback: s.profileSetterCallback,
 					},
 				},

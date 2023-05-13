@@ -17,9 +17,9 @@ package awsspec
 
 import (
 	"github.com/aws/aws-sdk-go/service/applicationautoscaling/applicationautoscalingiface"
-	"github.com/wallix/awless/cloud"
-	"github.com/wallix/awless/logger"
-	"github.com/wallix/awless/template/params"
+	"github.com/thunderbird86/awless/cloud"
+	"github.com/thunderbird86/awless/logger"
+	"github.com/thunderbird86/awless/template/params"
 )
 
 type CreateAppscalingtarget struct {

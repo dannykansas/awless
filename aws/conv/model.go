@@ -17,8 +17,8 @@ limitations under the License.
 
 package awsconv
 
-import "github.com/wallix/awless/cloud"
-import "github.com/wallix/awless/cloud/properties"
+import "github.com/thunderbird86/awless/cloud"
+import "github.com/thunderbird86/awless/cloud/properties"
 
 var awsResourcesDef = map[string]map[string]*propertyTransform{
 	//EC2

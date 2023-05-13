@@ -1,3 +1,11 @@
+## v0.2.00 [2023-05-13]
+
+**Forked and built with the new golang version due to the project being abandoned by Wallix.
+
+### Features
+
+- Bump golang version to 1.20
+
 ## v0.1.11 [2018-06-21]
 
 **Check out our new article** on [Simplified Multi-Factor Authentication](https://medium.com/@awlessCLI/simplified-multi-factor-authentication-for-aws-d703e8d9f332) with `awless`

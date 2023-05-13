@@ -23,13 +23,13 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/wallix/awless/cloud"
-	"github.com/wallix/awless/template/env"
-	"github.com/wallix/awless/template/params"
+	"github.com/thunderbird86/awless/cloud"
+	"github.com/thunderbird86/awless/template/env"
+	"github.com/thunderbird86/awless/template/params"
 
 	"github.com/aws/aws-sdk-go/service/cloudformation"
 	"github.com/aws/aws-sdk-go/service/cloudformation/cloudformationiface"
-	"github.com/wallix/awless/logger"
+	"github.com/thunderbird86/awless/logger"
 	"gopkg.in/yaml.v2"
 )
 
@@ -68,7 +68,7 @@ func (cmd *CreateStack) ExtractResult(i interface{}) string {
 }
 
 // Add StackFile support via BeforeRun hook
-// https://github.com/wallix/awless/issues/145
+// https://github.com/thunderbird86/awless/issues/145
 // http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/continuous-delivery-codepipeline-cfn-artifacts.html
 func (cmd *CreateStack) BeforeRun(renv env.Running) (err error) {
 	cmd.Parameters, cmd.Tags, cmd.PolicyBody, err = processStackFile(cmd.StackFile, cmd.PolicyFile, cmd.Parameters, cmd.Tags)
@@ -108,7 +108,7 @@ func (cmd *UpdateStack) ExtractResult(i interface{}) string {
 }
 
 // Add StackFile support via BeforeRun hook
-// https://github.com/wallix/awless/issues/145
+// https://github.com/thunderbird86/awless/issues/145
 // http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/continuous-delivery-codepipeline-cfn-artifacts.html
 func (cmd *UpdateStack) BeforeRun(renv env.Running) (err error) {
 	cmd.Parameters, cmd.Tags, cmd.PolicyBody, err = processStackFile(cmd.StackFile, cmd.PolicyFile, cmd.Parameters, cmd.Tags)
@@ -188,15 +188,20 @@ func readStackFile(p string) (sf *stackFile, err error) {
 // supplied with CLI and StackFile with higher priority for values passed via CLI
 // example:
 // via cli passed next parameters:
-//   Test1=a
-//   Test2=b
+//
+//	Test1=a
+//	Test2=b
+//
 // via StackFile passed next parameters:
-//   Test2=x
-//   Test3=y
+//
+//	Test2=x
+//	Test3=y
+//
 // after merge result will be:
-//   Test1=a
-//   Test2=b
-//   Test3=y
+//
+//	Test1=a
+//	Test2=b
+//	Test3=y
 func mergeCliAndFileValues(valMap map[string]string, valSlice []*string) (resSlice []*string) {
 	// if values map are absent in StackFile
 	// just return slice of CLI values
