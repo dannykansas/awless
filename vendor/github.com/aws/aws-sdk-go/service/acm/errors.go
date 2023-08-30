@@ -2,7 +2,30 @@
 
 package acm
 
+import (
+	"github.com/aws/aws-sdk-go/private/protocol"
+)
+
 const (
+
+	// ErrCodeAccessDeniedException for service response error code
+	// "AccessDeniedException".
+	//
+	// You do not have access required to perform this action.
+	ErrCodeAccessDeniedException = "AccessDeniedException"
+
+	// ErrCodeConflictException for service response error code
+	// "ConflictException".
+	//
+	// You are trying to update a resource or configuration that is already being
+	// created or updated. Wait for the previous operation to finish and try again.
+	ErrCodeConflictException = "ConflictException"
+
+	// ErrCodeInvalidArgsException for service response error code
+	// "InvalidArgsException".
+	//
+	// One or more of of request parameters specified is not valid.
+	ErrCodeInvalidArgsException = "InvalidArgsException"
 
 	// ErrCodeInvalidArnException for service response error code
 	// "InvalidArnException".
@@ -16,13 +39,16 @@ const (
 	// One or more values in the DomainValidationOption structure is incorrect.
 	ErrCodeInvalidDomainValidationOptionsException = "InvalidDomainValidationOptionsException"
 
+	// ErrCodeInvalidParameterException for service response error code
+	// "InvalidParameterException".
+	//
+	// An input parameter was invalid.
+	ErrCodeInvalidParameterException = "InvalidParameterException"
+
 	// ErrCodeInvalidStateException for service response error code
 	// "InvalidStateException".
 	//
-	// Processing has reached an invalid state. For example, this exception can
-	// occur if the specified domain is not using email validation, or the current
-	// certificate status does not permit the requested operation. See the exception
-	// message returned by ACM to determine which state is not valid.
+	// Processing has reached an invalid state.
 	ErrCodeInvalidStateException = "InvalidStateException"
 
 	// ErrCodeInvalidTagException for service response error code
@@ -35,11 +61,7 @@ const (
 	// ErrCodeLimitExceededException for service response error code
 	// "LimitExceededException".
 	//
-	// An ACM limit has been exceeded. For example, you may have input more domains
-	// than are allowed or you've requested too many certificates for your account.
-	// See the exception message returned by ACM to determine which limit you have
-	// violated. For more information about ACM limits, see the Limits (http://docs.aws.amazon.com/acm/latest/userguide/acm-limits.html)
-	// topic.
+	// An ACM quota has been exceeded.
 	ErrCodeLimitExceededException = "LimitExceededException"
 
 	// ErrCodeRequestInProgressException for service response error code
@@ -52,20 +74,58 @@ const (
 	// ErrCodeResourceInUseException for service response error code
 	// "ResourceInUseException".
 	//
-	// The certificate is in use by another AWS service in the caller's account.
-	// Remove the association and try again.
+	// The certificate is in use by another Amazon Web Services service in the caller's
+	// account. Remove the association and try again.
 	ErrCodeResourceInUseException = "ResourceInUseException"
 
 	// ErrCodeResourceNotFoundException for service response error code
 	// "ResourceNotFoundException".
 	//
-	// The specified certificate cannot be found in the caller's account, or the
+	// The specified certificate cannot be found in the caller's account or the
 	// caller's account cannot be found.
 	ErrCodeResourceNotFoundException = "ResourceNotFoundException"
+
+	// ErrCodeTagPolicyException for service response error code
+	// "TagPolicyException".
+	//
+	// A specified tag did not comply with an existing tag policy and was rejected.
+	ErrCodeTagPolicyException = "TagPolicyException"
+
+	// ErrCodeThrottlingException for service response error code
+	// "ThrottlingException".
+	//
+	// The request was denied because it exceeded a quota.
+	ErrCodeThrottlingException = "ThrottlingException"
 
 	// ErrCodeTooManyTagsException for service response error code
 	// "TooManyTagsException".
 	//
 	// The request contains too many tags. Try the request again with fewer tags.
 	ErrCodeTooManyTagsException = "TooManyTagsException"
+
+	// ErrCodeValidationException for service response error code
+	// "ValidationException".
+	//
+	// The supplied input failed to satisfy constraints of an Amazon Web Services
+	// service.
+	ErrCodeValidationException = "ValidationException"
 )
+
+var exceptionFromCode = map[string]func(protocol.ResponseMetadata) error{
+	"AccessDeniedException":                   newErrorAccessDeniedException,
+	"ConflictException":                       newErrorConflictException,
+	"InvalidArgsException":                    newErrorInvalidArgsException,
+	"InvalidArnException":                     newErrorInvalidArnException,
+	"InvalidDomainValidationOptionsException": newErrorInvalidDomainValidationOptionsException,
+	"InvalidParameterException":               newErrorInvalidParameterException,
+	"InvalidStateException":                   newErrorInvalidStateException,
+	"InvalidTagException":                     newErrorInvalidTagException,
+	"LimitExceededException":                  newErrorLimitExceededException,
+	"RequestInProgressException":              newErrorRequestInProgressException,
+	"ResourceInUseException":                  newErrorResourceInUseException,
+	"ResourceNotFoundException":               newErrorResourceNotFoundException,
+	"TagPolicyException":                      newErrorTagPolicyException,
+	"ThrottlingException":                     newErrorThrottlingException,
+	"TooManyTagsException":                    newErrorTooManyTagsException,
+	"ValidationException":                     newErrorValidationException,
+}

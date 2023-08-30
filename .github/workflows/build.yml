@@ -1,0 +1,91 @@
+name: Release
+
+on:
+  release:
+    types:
+      - "published"
+
+jobs:
+  build-darwin-arm64:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.21'
+
+    - name: Update Version
+      run: |
+        sed -i "s/v0.1.11/${{ github.event.release.tag_name }}/g" config/version.go
+
+    - name: Build
+      run: |
+        GOOS=darwin GOARCH=arm64 go build -o awless-darwin-arm64 .
+
+    - name: Upload binaries to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.PAT }}
+        file: ./awless-darwin-arm64
+        asset_name: awless-darwin-arm64
+        tag: ${{ github.ref }}
+        overwrite: true
+        body: awless-darwin-arm64
+
+  build-linux-amd64:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.21'
+
+    - name: Update Version
+      run: |
+        sed -i "s/v0.1.11/${{ github.event.release.tag_name }}/g" config/version.go
+
+    - name: Build
+      run: |
+        GOOS=linux GOARCH=amd64 go build -o awless-linux-amd64 .
+
+    - name: Upload binaries to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.PAT }}
+        file: ./awless-linux-amd64
+        asset_name: awless-linux-amd64
+        tag: ${{ github.ref }}
+        overwrite: true
+        body: awless-linux-amd64
+
+  build-windows-amd64:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.21'
+
+    - name: Update Version
+      run: |
+        sed -i "s/v0.1.11/${{ github.event.release.tag_name }}/g" config/version.go
+
+    - name: Build
+      run: |
+        GOOS=windows GOARCH=amd64 go build -o awless-windows-amd64 .
+
+    - name: Upload binaries to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.PAT }}
+        file: ./awless-windows-amd64
+        asset_name: awless-windows-amd64
+        tag: ${{ github.ref }}
+        overwrite: true
+        body: awless-windows-amd64
