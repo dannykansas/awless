@@ -24,9 +24,9 @@ For more read our [FAQ](#faq) below (how `awless` compares to other tools, etc.)
 Choose one of the following options:
 
 1. On macOS, use [homebrew](http://brew.sh):  `brew tap dannykansas/awless; brew install awless`
-2. With `curl` (macOS/Linux), run: `curl https://raw.githubusercontent.com/wallix/awless/master/getawless.sh | bash`
-3. Download the latest `awless` binaries (Windows/Linux/macOS) [from Github](https://github.com/thunderbird86/awless/releases/latest)
-4. If you have Golang already installed, install from the source with: `go get -u github.com/thunderbird86/awless`
+2. With `curl` (macOS/Linux), run: `curl https://raw.githubusercontent.com/dannykansas/awless/master/getawless.sh | bash`
+3. Download the latest `awless` binaries (Windows/Linux/macOS) [from Github](https://github.com/dannykansas/awless/releases/latest)
+4. If you have Golang already installed, install from the source with: `go get -u github.com/dannykansas/awless`
 
 If you have previously used the AWS CLI or aws-shell, you don't need to configure anything! Your config will be automatically loaded (i.e. ~/.aws/{credentials,config}) and `awless` will prompt for any missing info (more at our [getting started](https://github.com/thunderbird86/awless/wiki/Getting-Started)).
 
