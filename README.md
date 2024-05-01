@@ -1,6 +1,3 @@
-
-
-[![Build Status](https://api.travis-ci.org/wallix/awless.svg?branch=master)](https://travis-ci.org/wallix/awless)
 [![Go Report Card](https://goreportcard.com/badge/github.com/thunderbird86/awless)](https://goreportcard.com/report/github.com/thunderbird86/awless)
 
 <img src="https://user-images.githubusercontent.com/808274/33351381-5b9a0d00-d458-11e7-91ed-cf7ada7237c1.png" alt="terminal icon" width="48"> `awless` is a powerful, innovative and small surface command line interface (CLI) to manage Amazon Web Services.
@@ -26,7 +23,7 @@ For more read our [FAQ](#faq) below (how `awless` compares to other tools, etc.)
 
 Choose one of the following options:
 
-1. On macOS, use [homebrew](http://brew.sh):  `brew tap wallix/awless; brew install awless`
+1. On macOS, use [homebrew](http://brew.sh):  `brew tap dannykansas/awless; brew install awless`
 2. With `curl` (macOS/Linux), run: `curl https://raw.githubusercontent.com/wallix/awless/master/getawless.sh | bash`
 3. Download the latest `awless` binaries (Windows/Linux/macOS) [from Github](https://github.com/thunderbird86/awless/releases/latest)
 4. If you have Golang already installed, install from the source with: `go get -u github.com/thunderbird86/awless`
